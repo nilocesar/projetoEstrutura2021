@@ -1,0 +1,30 @@
+/*= AA1
+	----------------------------*/
+
+.template8a {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+            background-size: cover; */
+}
+
+.template8a .baseFundo {
+    background: url(../../img/aa8.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+        
+        Main Components 
+        
+        -------------------------------- */
+
+.template8a .titulo {
+    position: absolute;
+    width: 663px;
+}

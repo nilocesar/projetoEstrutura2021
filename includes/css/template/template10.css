@@ -1,0 +1,196 @@
+/*= AA1
+	----------------------------*/
+
+.template10 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                    background-size: cover; */
+}
+
+.template10 .baseFundo {
+    /* background: url(../../img/aa9.png) no-repeat center;
+    background-size: cover; */
+    background-color: #fff;
+}
+
+
+/* -------------------------------- 
+                
+                Main Components 
+                
+                -------------------------------- */
+
+.template10 .titulo {
+    position: absolute;
+    width: 602px;
+}
+
+.template10 a {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.template10 .lista {
+    position: absolute;
+    width: 1200px;
+}
+
+.template10 .item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.template10 .point {
+    position: relative;
+    width: 5%;
+    font-size: 100px;
+    line-height: 70px;
+}
+
+.template10 .text {
+    position: relative;
+    width: 95%;
+}
+
+.template10 .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 149px;
+    overflow: hidden;
+}
+
+.template10 .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #6FEC83;
+    border-top-right-radius: 200px;
+}
+
+.template10 .barraDataContent {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: #30BF58;
+    border-top-right-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template10 .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/livro.svg) no-repeat center;
+    background-size: contain;
+}
+
+.template10 .titulo {
+    position: absolute;
+    width: 687px;
+}
+
+.template10 .baseFundoFeed {
+    position: absolute;
+    width: 1328px;
+    height: 747px;
+    border: 5px solid #33649E;
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.template10 .content {
+    position: relative;
+    width: 1055px;
+    height: 580px;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.template10 .feedPDF .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    border: 5px solid rgba(51, 100, 158, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.template10 .feedPDF .content {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.template10 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.template10 .feedPositivo .content {
+    background-color: #40B865;
+    width: 800px;
+    height: 480px;
+}
+
+.template10 .closeX {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.template10 .closeX:hover {
+    color: #33649E;
+}
+
+.template10 .itx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template10 .txtSA {
+    padding: 20px;
+}
+
+.template10 .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}

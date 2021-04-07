@@ -1,0 +1,137 @@
+:root {
+    /* Colors: */
+    --unnamed-color-03296a: #03296A;
+    --unnamed-color-00bfb3: #00BFB3;
+    --unnamed-color-f5f5f5: #F5F5F5;
+    --unnamed-color-dde5e4: #DDE5E4;
+    --unnamed-color-86bae4: #86BAE4;
+    --unnamed-color-9f948a: #9F948A;
+    --unnamed-color-3e3e3e: #3E3E3E;
+    --unnamed-color-4a8ecc: #4A8ECC;
+    --unnamed-color-d9ceb4: #D9CEB4;
+    --unnamed-color-00aeef: #00AEEF;
+    --unnamed-color-005aab: #005AAB;
+    --unnamed-color-003399: #003399;
+    --unnamed-color-000066: #000066;
+}
+
+
+/*===========================
+  COR
+============================*/
+
+.branco {
+    color: #fff !important;
+}
+
+.preto {
+    color: #3F3F3F !important;
+}
+
+.cinza1 {
+    color: #a7a9ac !important;
+}
+
+.cinza2 {
+    color: #ACACAC !important;
+}
+
+.marrom {
+    color: #D8823B !important;
+}
+
+.marrom2 {
+    color: #E2893F !important;
+}
+
+.verde {
+    color: #008565 !important;
+}
+
+.vermelho {
+    color: #BF5636 !important;
+}
+
+.laranja {
+    color: #FF5900 !important;
+}
+
+.amarelo {
+    color: #FFEB34 !important;
+}
+
+.verde {
+    color: #1D9639 !important;
+}
+
+.verdeEscuro {
+    color: #1D9639 !important;
+}
+
+.azul1 {
+    color: #245CA0 !important;
+}
+
+.azul2 {
+    color: #113F6D !important;
+}
+
+.azul3 {
+    color: #396191 !important;
+}
+
+.roxo {
+    color: #8A5C7C !important;
+}
+
+.roxoEscuro {
+    color: #51396a !important;
+}
+
+.bg_branco {
+    background-color: #fff !important;
+}
+
+.bg_marrom {
+    background-color: #B66224 !important;
+}
+
+.bg_marrom2 {
+    background-color: #E38A3F !important;
+}
+
+.bg_cinza1 {
+    background-color: #393939 !important;
+}
+
+.bg_verde {
+    background-color: #008565 !important;
+}
+
+.bg_vermelho {
+    background-color: #ED1C24 !important;
+}
+
+.bg_laranja {
+    background-color: #FF5900 !important;
+}
+
+.bg_amarelo {
+    background-color: #FFCC00 !important;
+}
+
+.bg_verde {
+    background-color: #328369 !important;
+}
+
+.bg_azul1 {
+    background-color: #0D2554 !important;
+}
+
+.bg_azul2 {
+    background-color: #004C9A !important;
+}
+
+.bg_roxo {
+    background-color: #8A5C7C !important;
+}

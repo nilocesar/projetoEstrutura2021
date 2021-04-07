@@ -1,0 +1,99 @@
+<script>
+    course.telaEvent(_telaCurrent, {
+        "screenSwitch": function(param) {},
+        "screenCurrent": function(param) {
+            var _containerTela = param.container;
+            if (param.init) {
+                controle();
+            } else {
+
+            }
+
+            function controle() {
+                _containerTela.find(".feedX").css('display', 'none');
+                _containerTela.find(".itemDY").on('click', function() {
+                    _containerTela.find(".feedPDF").css('display', 'flex');
+                });
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+                    course.liberarNavegacao();
+                })
+            }
+        }
+    });
+</script>
+
+
+
+<div class="containerAA10 template10 template10a containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="792">
+            <div class="barraDataInit animated fadeInLeftBig delay0_8">
+                <div class="barraDataContent animated fadeInLeftBig delay2_2 branco">
+                    <div class="livro mr30"></div>
+                    <div>
+                        <div class="tituDa bold size32">
+                            LEITURA COMPLEMENTAR 2:
+                        </div>
+                        <div class="mt5 size26 itemDY">
+                            Para compreender as dificuldades em seguir algumas
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lista posicionar animated fadeIn size30" px="390" py="287">
+            <div class="animated fadeInUp delay0_4 size48 bold verde mb30 mr30">
+                FATORES DE INCENTIVO
+            </div>
+            <div class="item animated fadeInUp delay0_8">
+                <div class="point verde">
+                    &#8226;
+                </div>
+                <div class="text">
+                    Fatores da gestão, como contratos que garantam remuneração e duração da jornada compatíveis, são cruciais para o profissional seguir as medidas estipuladas na mensagem que criticamos na tela anterior.
+                </div>
+            </div>
+            <div class="item animated fadeInUp delay1_2">
+                <div class="point verde">
+                    &#8226;
+                </div>
+                <div class="text">
+                    Fatores organizacionais, como arranjos no planejamento das tarefas, são fundamentais para garantir estrita atenção às regras de segurança. É comum o profissional sacrificar uma regra de segurança: por exemplo, reutilizar EPI, quando o estoque chegou a
+                    zero.
+                </div>
+            </div>
+            <div class="item animated fadeInUp delay1_6">
+                <div class="point verde">
+                    &#8226;
+                </div>
+                <div class="text">
+                    Fatores da engenharia, como instalação de salas com áudio de orientação para o momento da paramentação
+                </div>
+            </div>
+        </div>
+
+
+        <div class="feedX feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <iframe src="anexos/leituraComplementar2.pdf" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

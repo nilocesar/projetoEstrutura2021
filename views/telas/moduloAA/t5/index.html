@@ -1,0 +1,184 @@
+<script>
+    course.telaEvent(_telaCurrent, {
+        "screenSwitch": function(param) {},
+        "screenCurrent": function(param) {
+            var _containerTela = param.container;
+
+            reset();
+            if (param.init) {
+                controle();
+            } else {
+
+            }
+
+            function reset() {
+                _containerTela.find(".item4").addClass('fadeInUp delay1_4');
+                _containerTela.find(".item4").removeClass('infinite pulse');
+            }
+
+            function controle() {
+                _containerTela.find(".feedX").css('display', 'none');
+                _containerTela.find(".barraDataContent").css('display', 'none');
+
+
+                _containerTela.find(".item").on('click', function() {
+
+                    var _res = $(this).attr('res');
+                    _containerTela.find(".item").addClass('itemDesativo');
+
+                    if (_res == 1) {
+                        _containerTela.find(".feedPositivo").css('display', 'flex');
+                    } else {
+                        _containerTela.find(".feedNegativo").css('display', 'flex');
+                    }
+                });
+
+
+                _containerTela.find(".itemDY").on('click', function() {
+                    _containerTela.find(".feedPDF").css('display', 'flex');
+                });
+
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+
+                    _containerTela.find(".item i").css('display', 'inline');
+                    _containerTela.find(".item i").css('opacity', '0');
+                    _containerTela.find(".item span").css('display', 'none');
+
+                    _containerTela.find(".item").each(function(indice, item) {
+
+                        if ($(item).attr('res') == 1) {
+                            $(item).find('i').css('opacity', '1');
+                        }
+
+                    });
+
+                    course.liberarNavegacao();
+
+                    _containerTela.find(".barraDataContent").css('display', 'flex');
+
+                });
+            }
+        }
+    });
+</script>
+
+
+
+<div class="containerAA5 template5 template5a containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="792">
+            <div class="barraDataInit animated fadeInLeftBig delay1_6">
+                <div class="barraDataContent animated fadeInLeftBig delay0_2 branco">
+                    <div class="livro size50 mr30"></div>
+                    <div>
+                        <div class="tituDa bold size32">
+                            LEITURA COMPLEMENTAR 1:
+                        </div>
+                        <div class="mt5 size32 itemDY">
+                            A saúde dos trabalhadores: questões pendentes
+                            <!-- <a href="anexos/leituraComplementar1.pdf" target="_blank">
+                                
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="titulo posicionar animated fadeIn" px="363" py="304">
+            <div class="animated fadeInUp delay0_6 size48 medium azul2">
+                Vacinar os trabalhadores da saúde é o ponto final de uma plataforma de proteção à saúde desse grupo essencial?
+            </div>
+            <div class="mt10 size31 medium animated fadeInUp delay1_0">
+                ASSINALE A ALTERNATIVA CORRETA:
+            </div>
+
+            <div class="listD mt50 bold size30 azul2">
+                <div class="item animated fadeInUp delay1_2" res="0">
+                    [ <span>&#8226;</span> <i class="fas fa-check verde"></i> ]&nbsp;&nbsp;&nbsp; VERDADEIRO
+                </div>
+                <div class="item animated fadeInUp delay1_4" res="1">
+                    [ <span>&#8226;</span> <i class="fas fa-check verde"></i> ]&nbsp;&nbsp;&nbsp; FALSO
+                </div>
+            </div>
+        </div>
+
+        <div class="feedX feedPositivo animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="300" py="200">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div class="tituloXD bold size42 center animated fadeInUp delay0_2">
+                        <i class="fas fa-check-circle"></i> CORRETO
+                    </div>
+                    <div class="listAA mt20 size36">
+                        <div class="itx animated fadeInUp delay0_6">
+                            <div class="txtSA center">
+                                Mesmo após a vacina, permanecem os desafios que antecedem a Covid-19.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="feedX feedNegativo animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="300" py="200">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div class="tituloXD bold size38 center animated fadeInUp delay0_2">
+                        <i class="fas fa-times-circle"></i> INCORRETO
+                    </div>
+                    <div class="listAA mt20 size26">
+                        <div class="itx animated fadeInUp delay0_6">
+                            <div class="txtSA">
+                                A vacinação é fundamental, mas não basta.Os trabalhadores da saúde adoecem e se acidentam mais do que outras categorias profissionais. Nos ambientes de trabalho, há poucos trabalhadores para o enorme volume de tarefas, o que demanda esforços substanciais.
+                                Essa escassez tem provocado uma enorme pressão no pessoal durante a pandemia. <br><br> As respostas propaladas para proteger os profissionais são inviáveis se os profissionais estiverem se
+                                sentindo pressionados diante dos objetivos da assistência. Precariedade dos contratos, baixa remuneração, jornada extensa: tudo isso é levado em conta em programas de proteção aos trabalhadores.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="feedX feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <iframe src="anexos/leituraComplementar1.pdf" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

@@ -1,0 +1,130 @@
+/*= AA1
+	----------------------------*/
+
+.template9 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                background-size: cover; */
+}
+
+.template9 .baseFundo {
+    background: url(../../img/aa9.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+            
+            Main Components 
+            
+            -------------------------------- */
+
+.template9 .titulo {
+    position: absolute;
+    width: 602px;
+}
+
+.template9 .mensagemBtn {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.template9 .lista {
+    position: absolute;
+    width: 602px;
+}
+
+.template9 .item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template9 .point {
+    position: relative;
+    width: 10%;
+    font-size: 100px;
+    line-height: 70px;
+}
+
+.template9 .text {
+    position: relative;
+    width: 90%;
+}
+
+.template9 .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    /* border: 5px solid #33649E; */
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.template9 .content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.template9 video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.template9 .placeholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../../../anexos/videoAA7.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template9 .placeholder i {
+    color: #ffffff;
+    font-size: 200px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.template9 .placeholder i:hover {
+    color: #245CA0;
+    transform: scale(1.1);
+}
+
+.template9 .closeX {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.template9 .closeX:hover {
+    color: #33649E;
+}

@@ -1,0 +1,197 @@
+/*= AA1
+	----------------------------*/
+
+.template5a {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                background-size: cover; */
+}
+
+.template5a .baseFundo {
+    background: url(../../img/aa5.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+            
+            Main Components 
+            
+            -------------------------------- */
+
+.template5a .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 149px;
+    overflow: hidden;
+}
+
+.template5a .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #6BADE8;
+    border-top-right-radius: 200px;
+}
+
+.template5a .barraDataContent {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: #4988CD;
+    border-top-right-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template5a .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/livro.svg) no-repeat center;
+    background-size: contain;
+}
+
+.template5a .titulo {
+    position: absolute;
+    width: 687px;
+}
+
+.template5a .listD {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.template5a .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.template5a .itemDesativo {
+    pointer-events: none;
+}
+
+.template5a .item:hover span {
+    opacity: 1;
+}
+
+.template5a .itemAtivo span {
+    opacity: 1;
+}
+
+.template5a .item span {
+    position: relative;
+    top: 12px;
+    font-size: 60px;
+    opacity: 0;
+}
+
+.template5a .item i {
+    position: relative;
+    top: 5px;
+    font-size: 40px;
+    display: none;
+}
+
+.template5a .baseFundoFeed {
+    position: absolute;
+    width: 1328px;
+    height: 747px;
+    border: 5px solid #33649E;
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.template5a .content {
+    position: relative;
+    width: 1055px;
+    height: 580px;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.template5a .feedPDF .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    border: 5px solid rgba(51, 100, 158, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.template5a .feedPDF .content {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.template5a .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.template5a .feedPositivo .content {
+    background-color: #40B865;
+    width: 800px;
+    height: 480px;
+}
+
+.template5a .closeX {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.template5a .closeX:hover {
+    color: #33649E;
+}
+
+.template5a .itx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template5a .txtSA {
+    padding: 20px;
+}
+
+.template5a .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}

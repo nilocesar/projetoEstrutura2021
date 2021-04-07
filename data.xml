@@ -1,0 +1,39 @@
+<estrutura>
+    <nivel id="modulo" titulo="Game">
+
+        <nivel id="moduloAA" titulo="">
+            <nivel id="aa1" titulo="" path="moduloAA/t1/index.html" avancar="2" transicao="alpha" setas="direita" />
+            <nivel id="aa2" titulo="" path="moduloAA/t2/index.html" avancar="2" transicao="alpha" setas="ambas" />
+            <nivel id="aa3" titulo="" path="moduloAA/t3/index.html" avancar="-1" transicao="alpha" setas="ambas" />
+            <nivel id="aa4" titulo="" path="moduloAA/t4/index.html" avancar="-1" transicao="alpha" setas="ambas" />
+            <nivel id="aa5" titulo="" path="moduloAA/t5/index.html" avancar="-1" transicao="alpha" setas="ambas" />
+            <nivel id="aa6" titulo="" path="moduloAA/t6/index.html" avancar="2" transicao="alpha" setas="ambas" />
+            <nivel id="aa7" titulo="" path="moduloAA/t7/index.html" avancar="-1" transicao="alpha" setas="ambas" />
+            <nivel id="aa8" titulo="" path="moduloAA/t8/index.html" avancar="2" transicao="alpha" setas="ambas" />
+            <nivel id="aa9" titulo="" path="moduloAA/t9/index.html" avancar="2" transicao="alpha" setas="ambas" />
+            <nivel id="aa10" titulo="" path="moduloAA/t10/index.html" avancar="-1" transicao="alpha" setas="esquerda" />
+        </nivel>
+
+
+
+    </nivel>
+    <info>
+
+        <debug>false</debug>
+        <cache>true</cache>
+        <retornar>nao</retornar>
+        <width>1920</width>
+        <height>1080</height>
+        <position>center</position>
+        <container>cover</container>
+
+        <compilador>
+            <titulo>serasa</titulo>
+            <zip_name>serasa</zip_name>
+            <padrao>scorm1.2</padrao>
+            <resize>sim</resize>
+            <speed>nao</speed>
+            <log>sim</log>
+        </compilador>
+    </info>
+</estrutura>

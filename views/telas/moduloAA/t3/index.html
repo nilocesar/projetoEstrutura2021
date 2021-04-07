@@ -1,0 +1,124 @@
+<script>
+    course.telaEvent(_telaCurrent, {
+        "screenSwitch": function() {
+            //console.log('screenSwitch')
+        },
+        "screenCurrent": function(param) {
+
+            var _containerTela = param.container;
+
+
+            if (param.init) {
+                controle();
+            } else {
+                reset();
+            }
+
+            function reset() {
+                _containerTela.find(".item1 .txF").removeClass('delay0_8')
+                _containerTela.find(".item2").removeClass('delay1_6')
+                _containerTela.find(".item2").addClass('delay0_4')
+            }
+
+            function controle() {
+
+                _containerTela.find(".item").css('display', 'none');
+                _containerTela.find(".txF").css('display', 'none');
+
+                nextInit(_containerTela.find(".item1"), 2);
+                _containerTela.find(".item2").addClass('delay1_6')
+
+                _containerTela.find(".item").on('click', function() {
+
+                    var _item = $(this).attr('item');
+                    var _next = parseInt($(this).attr('item')) + 1;
+                    var _all = _containerTela.find(".item").length;
+
+                    nextInit($(this), _next)
+
+                    if (_item == _all) {
+                        course.liberarNavegacao();
+                    }
+                });
+
+                function nextInit(_item, _next) {
+                    _item.addClass('itemAtivo');
+                    _item.find('.fa-plus').css('display', 'none');
+                    _item.find('.fa-check').css('display', 'block');
+                    _item.find('.ico').addClass('icoAtivo');
+                    _item.find('.ico').removeClass('animated infinite pulse');
+                    _item.find('.txF').css('display', 'flex');
+                    _containerTela.find(".item" + _next).css('display', 'flex')
+                }
+            }
+        }
+    });
+</script>
+
+
+<div class="containerAA3 template3 template3a containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="list posicionar animated fadeIn" px="343" py="250">
+            <div class="animated fadeInUp delay0_4 size48 bold branco">
+                OBJETIVOS PEDAGÓGICOS
+            </div>
+
+            <div class="its mt20">
+                <div class="item item1 animated fadeInUp delay0_4" item=1>
+                    <div class="ico">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft delay0_8">
+                            Explicar os aspectos básicos sobre <br>a infecção SARS-CoV-2.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item2 animated fadeInUp" item=2>
+                    <div class="ico animated infinite pulse">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft">
+                            Avaliar o risco de exposição à COVID-19 no <br>local de trabalho.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item3 animated fadeInUp delay0_4" item=3>
+                    <div class="ico animated infinite pulse">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft">
+                            Definir etapas-chave na proteção dos trabalhadores e controle da exposição contra a infecção.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item4 animated fadeInUp delay0_4" item=4>
+                    <div class="ico animated infinite pulse">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft">
+                            Identificar e criticar planos embasados em modelos reducionistas da situação de exposição ao risco.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

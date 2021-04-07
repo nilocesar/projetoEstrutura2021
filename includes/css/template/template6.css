@@ -1,0 +1,108 @@
+/*= AA1
+	----------------------------*/
+
+.template6 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+            background-size: cover; */
+}
+
+.template6 .baseFundo {
+    background: url(../../img/aa6.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+        
+        Main Components 
+        
+        -------------------------------- */
+
+.template6 .titulo {
+    position: absolute;
+    width: 984px;
+}
+
+.template6 .logoAA6 {
+    position: absolute;
+    width: 166px;
+    height: 77px;
+    background: url(../../img/ico3AA6.svg) no-repeat center;
+    background-size: contain;
+}
+
+.template6 .list {
+    position: absolute;
+    width: 586px;
+}
+
+.template6 .itx {
+    position: relative;
+    cursor: pointer;
+}
+
+.template6 .itx a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+}
+
+.template6 .itx:hover span {
+    color: #113F6D;
+}
+
+.template6 .itx span {
+    text-decoration: underline;
+}
+
+.template6 .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    /* border: 5px solid #33649E; */
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.template6 .content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.template6 .closeX {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.template6 .closeX:hover {
+    color: #33649E;
+}
+
+.template6 .content .ytplayer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

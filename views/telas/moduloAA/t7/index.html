@@ -1,0 +1,189 @@
+<script>
+    course.telaEvent(_telaCurrent, {
+        "screenInit": function(param) {
+            window[param.id] = {
+                player1: null,
+                playVideo: function() {
+                    if (this.player1 != null) {
+                        this.player1.play();
+                    }
+                },
+                stopVideo: function() {
+                    if (this.player1 != null) {
+                        this.player1.pause();
+                    }
+                }
+            }
+        },
+        "screenSwitch": function(param) {
+            window['aa7'].stopVideo();
+        },
+        "screenCurrent": function(param) {
+            var _containerTela = param.container;
+
+            reset();
+            if (param.init) {
+
+                controle();
+
+            } else {
+
+            }
+
+            function controle() {
+
+                window[param.id].player1 = document.getElementById("video" + (param.id).toUpperCase());
+                var _stepAll = _containerTela.find(".step").length;
+                var _i = 0;
+
+                while (_i < _stepAll) {
+                    _i += 1;
+                    _containerTela.find(".pinAll").append(
+                        '<div class="pin pin' + _i + '" step=' + _i + '></div>'
+                    )
+                }
+                _containerTela.find(".pin1").addClass('pinAtivo');
+                _containerTela.find(".pin").on('click', function() {
+                    var _step = $(this).attr('step');
+
+                    _containerTela.find(".pin").removeClass('pinAtivo');
+                    $(this).addClass('pinAtivo');
+
+                    _containerTela.find(".nleft").css('display', 'flex');
+                    _containerTela.find(".nright").css('display', 'flex');
+
+                    if (_step == 1)
+                        _containerTela.find(".nleft").css('display', 'none');
+
+                    if (_step == _stepAll) {
+                        _containerTela.find(".nright").css('display', 'none');
+                        course.liberarNavegacao();
+                    }
+
+                    _containerTela.find(".step").css('display', 'none');
+                    _containerTela.find(".step" + _step).css('display', 'flex');
+
+                    window[param.id].stopVideo();
+
+                });
+
+                _containerTela.find(".nleft").on('click', function() {
+
+                    var _step = parseInt($(this).parent().attr('stepAtivo')) - 1;
+                    $(this).parent().attr('stepAtivo', _step);
+
+                    _containerTela.find(".nright").css('display', 'flex');
+
+                    if (_step == 1)
+                        _containerTela.find(".nleft").css('display', 'none');
+
+                    _containerTela.find(".step").css('display', 'none');
+                    _containerTela.find(".step" + _step).css('display', 'flex');
+                    _containerTela.find(".pin").removeClass('pinAtivo');
+                    _containerTela.find(".pin" + _step).addClass('pinAtivo');
+
+                    window[param.id].stopVideo();
+
+                });
+
+                _containerTela.find(".nright").on('click', function() {
+
+                    var _step = parseInt($(this).parent().attr('stepAtivo')) + 1;
+
+
+                    _containerTela.find(".nleft").css('display', 'flex');
+
+                    if (_step == _stepAll) {
+                        _containerTela.find(".nright").css('display', 'none');
+                        course.liberarNavegacao();
+                    }
+
+
+                    $(this).parent().attr('stepAtivo', _step);
+
+                    _containerTela.find(".step").css('display', 'none');
+                    _containerTela.find(".step" + _step).css('display', 'flex');
+                    _containerTela.find(".pin").removeClass('pinAtivo');
+                    _containerTela.find(".pin" + _step).addClass('pinAtivo');
+
+                    window[param.id].stopVideo();
+                });
+
+                _containerTela.find(".placeholder").on('click', function() {
+                    $(this).css('display', 'none');
+                    window[param.id].playVideo();
+                })
+
+            }
+
+            function reset() {
+                _containerTela.find(".nav").attr('stepAtivo', 1);
+                _containerTela.find(".step").css('display', 'none');
+                _containerTela.find(".nX").css('display', 'none');
+
+                _containerTela.find(".nright").css('display', 'flex');
+                _containerTela.find(".step1").css('display', 'flex');
+
+                _containerTela.find(".pin").removeClass('pinAtivo');
+                _containerTela.find(".pin1").addClass('pinAtivo');
+            }
+        }
+    });
+</script>
+
+<div class="containerAA7 template7 template7a containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_4" px="300" py="200"></div>
+
+        <div class="bloco posicionar animated fadeIn delay0_8" px="405" py="325">
+
+            <div class="pinAll">
+                <!-- <div class="pin"></div>
+                <div class="pin"></div> -->
+            </div>
+
+            <div class="nav branco size30" stepAtivo=1>
+                <div class="nX nleft">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div class="nX nright">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="step step1 animated fadeIn delay0_2" step=1>
+                <div class="pc">
+                    <video id="videoAA7" class="videoBase" controls poster="anexos/videoAA7.png">
+                        <source src="anexos/videoAA7.mp4" type="video/mp4">
+                    </video>
+                    <div class="placeholder">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <div class="text branco bold size42">
+                    Homenagem do Ministério da Saúde
+                </div>
+            </div>
+
+            <div class="step step2 stepXD animated fadeIn delay0_2" step=2>
+                <div class="imgX"></div>
+                <div class="text size41 branco">
+                    Homenagens são um alento relevante. Expressam reconhecimento da sociedade pelos esforços envidados. No entanto, não bastam.
+                </div>
+            </div>
+
+            <div class="step step3 stepXD animated fadeIn delay0_2" step=3>
+                <div class="imgX"></div>
+                <div class="text size41 branco">
+                    Desde abril de 2020, o <a href="http://conselho.saude.gov.br" target="_blank">Conselho Nacional de Saúde</a> indicava a complexidade do tema relacionado à saúde dos trabalhadores da saúde no contexto pandêmico
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

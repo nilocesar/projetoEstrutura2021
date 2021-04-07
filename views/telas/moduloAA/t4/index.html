@@ -1,0 +1,272 @@
+<script>
+    course.telaEvent(_telaCurrent, {
+        "screenSwitch": function(param) {},
+        "screenCurrent": function(param) {
+            var _containerTela = param.container;
+            reset();
+            if (param.init) {
+                controle();
+            } else {
+
+            }
+
+            function reset() {
+                _containerTela.find(".item4").addClass('fadeInUp delay1_4');
+                _containerTela.find(".item4").removeClass('infinite pulse');
+                _containerTela.find(".feedX").css('display', 'none');
+            }
+
+            function controle() {
+
+                var _modulo = 4;
+                _containerTela.find(".item4").on('animationend', function() {
+                    _containerTela.find(".item" + _modulo).removeClass('fadeInUp delay1_4');
+                    _containerTela.find(".item" + _modulo).addClass('infinite pulse');
+                });
+
+                _containerTela.find(".item").on('click', function() {
+
+                    var _item = $(this).attr('item');
+                    _containerTela.find(".feed" + _item).css('display', 'block');
+
+                    if (_item == _modulo) {
+                        $(this).removeClass('infinite pulse');
+                        course.liberarNavegacao();
+                    }
+                });
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+                });
+            }
+        }
+    });
+</script>
+
+<div class="containerAA4 template4 template4a containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="lista posicionar animated fadeIn" px="330" py="279">
+            <div class="animated fadeInUp delay0_6 up size48 bold vermelho">
+                MÓDULOS DO CURSO
+            </div>
+            <div class="mt50 listaF center">
+                <div class="item item1 animated fadeInUp delay0_8" item=1>
+                    <div class="circulo mb20"></div>
+                    <div class="titulo bold size27">
+                        MÓDULO 1
+                    </div>
+                    <div class="txtD size25">
+                        Conceitos básicos <br>sobre a SARS-CoV-2
+                    </div>
+                </div>
+
+                <div class="item item2 animated fadeInUp delay1_0" item=2>
+                    <div class="circulo mb20"></div>
+                    <div class="titulo bold size27">
+                        MÓDULO 2
+                    </div>
+                    <div class="txtD size25">
+                        Avaliação do potencial <br>de exposição ao risco<br> de infecção no<br> local de trabalho
+                    </div>
+                </div>
+
+                <div class="item item3 animated fadeInUp delay1_2" item=3>
+                    <div class="circulo mb20"></div>
+                    <div class="titulo bold size27 mb10">
+                        MÓDULO 3
+                    </div>
+                    <div class="txtD size25">
+                        Métodos de prevenção <br>nos serviços do SUS
+                    </div>
+                </div>
+
+                <div class="item item4 animated fadeInUp delay1_4 btnAtual" item=4>
+                    <div class="circulo mb20"></div>
+                    <div class="titulo bold size27 mb10">
+                        MÓDULO 4
+                    </div>
+                    <div class="txtD size25">
+                        Abordagem sistêmica <br>no lugar da resposta reducionista
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="feedX feed1 animated fadeIn">
+
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+            <div class="content posicionar animated fadeIn branco" px="432" py="293">
+
+                <div class="closeX">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="tituloXD bold size48 center animated fadeInUp delay0_2">
+                    OBJETIVOS DO MÓDULO 1
+                </div>
+                <div class="listAA mt20 size30">
+                    <div class="itx animated fadeInUp delay0_6">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Discutir o contexto do vírus SARS-CoV-2 e da epidemia.
+                        </div>
+                    </div>
+                    <div class="itx animated fadeInUp delay1_0">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Conhecer aspectos básicos da infecção pelo SARS-CoV-2: transmissão, sintomas, testes diagnósticos, tratamento e vacinas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="feedX feed2 animated fadeIn">
+
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+            <div class="content posicionar animated fadeIn branco" px="432" py="293">
+
+                <div class="closeX">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="tituloXD bold size48 center animated fadeInUp delay0_2">
+                    OBJETIVOS DO MÓDULO 2
+                </div>
+                <div class="listAA mt20 size30">
+                    <div class="itx animated fadeInUp delay0_6">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Conhecer os fatores de exposição à Covid-19, de acordo com as características dos serviços de saúde.
+                        </div>
+                    </div>
+                    <div class="itx animated fadeInUp delay1_0">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Identificar o grau de risco das atividades desenvolvidas pelos trabalhadores da saúde.
+                        </div>
+                    </div>
+                    <div class="itx animated fadeInUp delay1_4">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Diferenciar os equipamentos de proteção individuais (EPI), de acordo com a indicação e grau de proteção.
+                        </div>
+                    </div>
+                    <div class="itx animated fadeInUp delay1_8">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Apresentar a importância de proteção e adesão ao uso de EPI.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="feedX feed3 animated fadeIn">
+
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+            <div class="content posicionar animated fadeIn branco" px="432" py="293">
+
+                <div class="closeX">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="tituloXD bold size48 center animated fadeInUp delay0_2">
+                    OBJETIVOS DO MÓDULO 3
+                </div>
+                <div class="listAA mt20 size30">
+                    <div class="itx animated fadeInUp delay0_6">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Conhecer as recomendações governamentais para a prevenção da infecção COVID-19 em serviços de saúde.
+                        </div>
+                    </div>
+                    <div class="itx animated fadeInUp delay1_0">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Defender as medidas de monitoramento da exposição dos trabalhadores da saúde.
+                        </div>
+                    </div>
+                    <div class="itx animated fadeInUp delay1_4">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Discorrer sobre o controle administrativo e de engenharia para a prevenção da COVID-19.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="feedX feed4 animated fadeIn">
+
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+            <div class="content posicionar animated fadeIn branco" px="432" py="293">
+
+                <div class="closeX">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="tituloXD bold size48 center animated fadeInUp delay0_2">
+                    OBJETIVOS DO MÓDULO 4
+                </div>
+                <div class="listAA mt20 size30">
+                    <div class="itx animated fadeInUp delay0_6">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Desenvolver a capacidade crítica em face aos planos que reduzem a complexidade da situação da exposição ao risco da infecção COVID-19 no ambiente de trabalho.
+                        </div>
+                    </div>
+                    <div class="itx animated fadeInUp delay1_0">
+                        <div class="icoX">
+                            <i class="far fa-check-square size50"></i>
+                        </div>
+                        <div class="txtSA">
+                            Fortalecer os profissionais da saúde na busca de linhas de intervenção em nível sistêmico.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

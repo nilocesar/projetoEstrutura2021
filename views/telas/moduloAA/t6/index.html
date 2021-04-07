@@ -1,0 +1,206 @@
+<script>
+    course.telaEvent(_telaCurrent, {
+        "screenInit": function(param) {
+
+            console.log(param.id)
+            window[param.id] = {
+                player1: null,
+                videoID1: 'hnuI7IFwmwc',
+                playling1: 0,
+                player2: null,
+                videoID2: 'QDl4hDVgdlE',
+                playling2: 0
+            }
+        },
+        "screenSwitch": function(param) {
+            if (window['aa6'].player1 != null) {
+                if (window['aa6'].playling1 == 1) {
+                    window['aa6'].player1.pauseVideo();
+                }
+            }
+
+            if (window['aa6'].playerAA2 != null) {
+                if (window['aa6'].playling2 == 1) {
+                    window['aa6'].player2.pauseVideo();
+                }
+            }
+        },
+        "screenCurrent": function(param) {
+            var _containerTela = param.container;
+            reset();
+            if (param.init) {
+                controle();
+            } else {
+
+            }
+
+            function reset() {
+                _containerTela.find(".feedX").css('display', 'none');
+            }
+
+            function controle() {
+
+                _containerTela.find(".feedX").css('display', 'none');
+
+                var _item = null;
+                _containerTela.find(".itx").on('click', function() {
+
+                    $(this).attr('ativo', '1')
+
+                    _item = $(this).attr('item');
+                    if (_item != 1) {
+                        _containerTela.find(".feed" + _item).css('display', 'flex');
+                    }
+                });
+
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+
+                    if (_item == 2)
+                        window[param.id].player1.pauseVideo();
+
+                    if (_item == 3)
+                        window[param.id].player2.pauseVideo();
+
+                    var _comp = true;
+                    _containerTela.find(".itx").each(function(indice, item) {
+
+                        if (!$(item).attr('ativo')) {
+                            _comp = false;
+                        }
+                    })
+
+                    if (_comp)
+                        course.liberarNavegacao();
+
+                });
+            }
+        }
+    });
+
+    // app do youtube nao pode ser feita dinamica
+    if (window['aa6'].player1 == null) {
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubePlayerAPIReady() {
+            console.log('eee')
+            window['aa6'].player1 = new YT.Player('ytplayer1', {
+                videoId: window['aa6'].videoID1,
+                events: {
+                    'onStateChange': onPlayerStateChange1
+                }
+            });
+
+            window['aa6'].player2 = new YT.Player('ytplayer2', {
+                videoId: window['aa6'].videoID2,
+                events: {
+                    'onStateChange': onPlayerStateChange2
+                }
+            });
+        }
+
+        function onPlayerStateChange1(event) {
+
+            if (event.target.getPlayerState() == 0) {
+                // console.log('complete video');
+            } else if (event.target.getPlayerState() == 1) {
+                window['aa6'].playling1 = 1;
+            } else {
+                window['aa6'].playling1 = 0;
+            }
+        }
+
+        function onPlayerStateChange2(event) {
+
+            if (event.target.getPlayerState() == 0) {
+                // console.log('complete video');
+            } else if (event.target.getPlayerState() == 1) {
+                window['aa6'].playling2 = 1;
+            } else {
+                window['aa6'].playling2 = 0;
+            }
+        }
+    }
+</script>
+
+
+
+<div class="containerAA6 template6 template6a containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+        <!-- <div class="logoAA6 posicionar animated fadeIn delay1_6" px="1342" py="839"> </div> -->
+
+        <div class="titulo posicionar animated fadeIn" px="510" py="248">
+            <div class="animated fadeInUp delay0_6 up size40 bold branco center">
+                A Organização Mundial da Saúde (OMS) designou 2021 como o Ano da Saúde dos trabalhadores da saúde
+            </div>
+        </div>
+
+        <div class="list posicionar animated fadeIn size31" px="1030" py="531">
+            <div class="tid bold size36 azul2 mb20 animated fadeInUp delay0_8">
+                OUTRAS HOMENAGENS
+            </div>
+            <div class="itx itx1 animated fadeInUp delay1_0" item=1>
+                <a href="http://www.redeunida.org.br/pt-br/comunicacao/news/homenagem-aos-profissionais-de-saude-mortos-por-co/" target="_blank"></a>
+                <i class="fas fa-external-link-alt azul2"></i>
+                <span>
+                    Homenagem da Rede Unida
+                </span>
+            </div>
+            <div class="itx itx2 animated fadeInUp delay1_2 mt10 mb10" item=2>
+
+                <i class="fas fa-play-circle azul2"></i>
+                <span>
+                    Homenagem do Hospital Einstein
+                </span>
+            </div>
+            <div class="itx itx3 animated fadeInUp delay1_4" item=3>
+                <i class="fas fa-play-circle azul2"></i>
+                <span>
+                    Homenagem da Bayer
+                </span>
+            </div>
+        </div>
+
+
+        <div class="feedX feed2 animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div id="ytplayer1" class="ytplayer"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="feedX feed3 animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div id="ytplayer2" class="ytplayer"></div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

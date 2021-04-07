@@ -1,0 +1,113 @@
+<script>
+    course.telaEvent(_telaCurrent, {
+        "screenInit": function(param) {
+            window[param.id] = {
+                player1: null,
+                playVideo: function() {
+                    if (this.player1 != null) {
+                        this.player1.play();
+                    }
+                },
+                stopVideo: function() {
+                    if (this.player1 != null) {
+                        this.player1.pause();
+                    }
+                }
+            }
+        },
+        "screenSwitch": function(param) {},
+        "screenCurrent": function(param) {
+            var _containerTela = param.container;
+            if (param.init) {
+                controle();
+            } else {
+
+            }
+
+            function controle() {
+                window[param.id].player1 = document.getElementById("video" + (param.id).toUpperCase());
+                _containerTela.find(".feedX").css('display', 'none');
+
+                _containerTela.find(".mensagemBtn").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'flex');
+                })
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+                    window[param.id].playVideo();
+                })
+
+                _containerTela.find(".placeholder").on('click', function() {
+                    _containerTela.find("video").css('display', 'flex');
+                    $(this).css('display', 'none');
+                    window[param.id].playVideo();
+                })
+
+            }
+        }
+    });
+</script>
+
+
+<div class="containerAA9 template9 template9a containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="titulo posicionar animated fadeIn" px="477" py="250">
+            <div class="animated fadeInUp delay0_6 size41 bold branco center">
+                Muitas vezes, a falta de tempo e o cansaço não permitem ao trabalhador da saúde o autocuidado propagado pela seguinte <span class="mensagemBtn">mensagem</span> :
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="412" py="648">
+            <div class="item animated fadeInUp delay1_0">
+                <div class="point verde">
+                    &#8226;
+                </div>
+                <div class="text">
+                    Descansar e fazer pausas entre um turno e outro;
+                </div>
+            </div>
+            <div class="item animated fadeInUp delay1_4">
+                <div class="point verde">
+                    &#8226;
+                </div>
+                <div class="text">
+                    Ter uma alimentação saudável;
+                </div>
+            </div>
+            <div class="item animated fadeInUp delay1_8">
+                <div class="point verde">
+                    &#8226;
+                </div>
+                <div class="text">
+                    Fazer atividade física regularmente, como dançar, fazer ginástica.
+                </div>
+            </div>
+        </div>
+
+        <div class="feedX animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <video id="videoAA9" class="ytplayer" controls poster="anexos/videoAA7.png">
+                        <source src="anexos/videoAA7.mp4" type="video/mp4">
+                    </video>
+                    <div class="placeholder">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

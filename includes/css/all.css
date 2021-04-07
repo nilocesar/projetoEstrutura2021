@@ -1,0 +1,66 @@
+/*--------------------------*/
+
+
+/*FRAMEWORKS
+----------------------------*/
+
+@import url("reset.css");
+@import url("animate.css");
+@import url("icones.css");
+
+/*CONTROL
+----------------------------*/
+
+@import url("fonts.css");
+@import url("colors.css");
+@import url("props.css");
+
+/*--------------------------*/
+
+
+/*INTERFACE
+----------------------------*/
+
+@import url("interface.css");
+@import url("custom.css");
+@import url("debug.css");
+
+/*--------------------------*/
+
+
+/*Template BASE
+----------------------------*/
+
+@import url("template/template1.css");
+@import url("template/template2.css");
+@import url("template/template3.css");
+@import url("template/template4.css");
+@import url("template/template5.css");
+@import url("template/template6.css");
+@import url("template/template7.css");
+@import url("template/template8.css");
+@import url("template/template9.css");
+@import url("template/template10.css");
+
+/*Template MODULO A
+----------------------------*/
+
+@import url("templateAA/template1.css");
+@import url("templateAA/template2.css");
+@import url("templateAA/template3.css");
+@import url("templateAA/template4.css");
+@import url("templateAA/template5.css");
+@import url("templateAA/template6.css");
+@import url("templateAA/template7.css");
+@import url("templateAA/template8.css");
+@import url("templateAA/template9.css");
+@import url("templateAA/template10.css");
+
+/*--------------------------*/
+
+
+/*PRINT
+----------------------------*/
+
+
+/*@import url("telas/print.css");*/
